@@ -80,7 +80,7 @@ export default function Hero() {
 
               <div className="relative w-48 h-48 md:w-56 md:h-56 lg:w-80 lg:h-80  rounded-full overflow-hidden border-4 border-white dark:border-neutral-800 shadow-xl">
                 <img
-                  src="/profile-3.jpg"
+                  src="/profile-1.jpg"
                   alt="Prashant Kumar"
                   className="w-full h-full object-cover"
                 />
