@@ -1,4 +1,6 @@
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
@@ -7,27 +9,14 @@ export default async function handler(req, res) {
 
   const { name, email, message } = req.body;
 
-  // Basic validation
   if (!name || !email || !message) {
     return res.status(400).json({ message: "All fields are required" });
   }
 
-  if (!email.includes("@")) {
-    return res.status(400).json({ message: "Invalid email address" });
-  }
-
   try {
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
-
-    await transporter.sendMail({
-      from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
-      to: process.env.EMAIL_USER,
+    await resend.emails.send({
+      from: "Portfolio <onboarding@resend.dev>",
+      to: ["prashantsin2gh@gmail.com"],
       subject: `New Contact Message from ${name}`,
       html: `
         <h3>New Contact Message</h3>
