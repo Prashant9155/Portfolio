@@ -15,6 +15,7 @@ const projects = [
     ],
     code: "#",
   },
+
   {
     id: 2,
     title: "Real-time Quiz Application",
@@ -43,6 +44,20 @@ const projects = [
     ],
     code: "#",
   },
+    {
+  id: 4,
+  title: "Admin Dashboard",
+  category: "dashboards",
+  description: "Role-based admin dashboard with real-time analytics.",
+  highlights: [
+    "Role-based access",
+    "Optimized React rendering",
+    "Responsive admin UI"
+  ],
+  video: "/videos/admin.mp4",
+  screenshots: ["/shots/1.png", "/shots/2.png"],
+  live: null
+},
 ];
 
 export default projects;

@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { Send, CheckCircle, Loader2 } from "lucide-react";
 
 export default function ContactForm() {
   const [form, setForm] = useState({
     name: "",
     email: "",
+    subject: "",
     message: "",
   });
   const [loading, setLoading] = useState(false);
@@ -25,11 +27,10 @@ export default function ContactForm() {
       });
 
       const data = await res.json();
-
       if (!res.ok) throw new Error(data.message);
 
       setStatus("success");
-      setForm({ name: "", email: "", message: "" });
+      setForm({ name: "", email: "", subject: "", message: "" });
     } catch (err) {
       setStatus(err.message || "Something went wrong");
     } finally {
@@ -37,49 +38,67 @@ export default function ContactForm() {
     }
   };
 
-  return (
-    <form onSubmit={handleSubmit} className="space-y-4 max-w-md">
-      <input
-        name="name"
-        placeholder="Your Name"
-        value={form.name}
-        onChange={handleChange}
-        required
-        className="w-full px-4 py-3 rounded-lg border dark:bg-neutral-900"
-      />
+  if (status === "success") {
+    return (
+      <div className="rounded-xl border border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-900/20 p-8 text-center">
+        <CheckCircle className="mx-auto mb-4 h-10 w-10 text-green-600 dark:text-green-400" />
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+          Message sent successfully
+        </h3>
+        <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+          Thanks for reaching out. I’ll get back to you shortly.
+        </p>
+      </div>
+    );
+  }
 
-      <input
-        name="email"
-        type="email"
-        placeholder="Your Email"
-        value={form.email}
-        onChange={handleChange}
-        required
-        className="w-full px-4 py-3 rounded-lg border dark:bg-neutral-900"
-      />
+  return (
+    <form
+      onSubmit={handleSubmit}
+      className="rounded-xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-6 space-y-5"
+    >
+      {["name", "email", "subject"].map((field) => (
+        <input
+          key={field}
+          name={field}
+          type={field === "email" ? "email" : "text"}
+          placeholder={field.charAt(0).toUpperCase() + field.slice(1)}
+          value={form[field]}
+          onChange={handleChange}
+          required
+          className="w-full px-4 py-3 rounded-lg border dark:bg-neutral-900 dark:border-neutral-700 focus:ring-2 focus:ring-blue-500"
+        />
+      ))}
 
       <textarea
         name="message"
-        placeholder="Your Message"
-        rows={4}
+        rows={5}
+        placeholder="Tell me about your project or opportunity"
         value={form.message}
         onChange={handleChange}
         required
-        className="w-full px-4 py-3 rounded-lg border dark:bg-neutral-900"
+        className="w-full px-4 py-3 rounded-lg border dark:bg-neutral-900 dark:border-neutral-700 focus:ring-2 focus:ring-blue-500 resize-none"
       />
 
       <button
         disabled={loading}
-        className="px-6 py-3 rounded-lg bg-blue-600 text-white"
+        className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium transition"
       >
-        {loading ? "Sending..." : "Send Message"}
+        {loading ? (
+          <>
+            <Loader2 className="animate-spin" size={18} />
+            Sending…
+          </>
+        ) : (
+          <>
+            <Send size={18} />
+            Send Message
+          </>
+        )}
       </button>
 
-      {status === "success" && (
-        <p className="text-green-600">Message sent successfully!</p>
-      )}
       {status && status !== "success" && (
-        <p className="text-red-600">{status}</p>
+        <p className="text-sm text-red-600 text-center">{status}</p>
       )}
     </form>
   );

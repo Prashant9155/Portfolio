@@ -2,7 +2,7 @@ export default function About() {
   return (
     <section className="py-24">
       <div className="max-w-6xl mx-auto px-6">
-        
+
         {/* ABOUT HERO */}
         <div className="grid gap-16 md:grid-cols-2 items-center mb-24">
           
@@ -17,14 +17,15 @@ export default function About() {
               <span className="font-semibold text-gray-900 dark:text-white">
                 Prashant Kumar
               </span>
-              , a frontend-focused developer with a strong interest in building
-              clean, scalable, and performance-driven web interfaces.
+              , a frontend-focused developer who enjoys building clean,
+              scalable, and performance-oriented web applications.
             </p>
 
             <p className="mt-4 text-gray-600 dark:text-gray-400">
-              My work sits at the intersection of design and engineering —
-              translating ideas into polished user experiences using modern
-              frontend technologies.
+              I specialize in translating complex requirements into intuitive,
+              maintainable user interfaces using modern frontend technologies.
+              I value clarity in design, simplicity in code, and consistency
+              across products.
             </p>
 
             {/* CTA */}
@@ -47,9 +48,9 @@ export default function About() {
             <div className="mt-10 grid grid-cols-2 gap-6">
               {[
                 { label: "Experience", value: "2.5+ Years" },
-                { label: "Projects", value: "6+ Production Projects" },
-                { label: "Primary Focus", value: "Frontend & UI" },
-                { label: "Approach", value: "Performance-First" },
+                { label: "Projects", value: "6+ Production Builds" },
+                { label: "Primary Focus", value: "Frontend & UI Engineering" },
+                { label: "Mindset", value: "Performance & Maintainability" },
               ].map((item) => (
                 <div
                   key={item.label}
@@ -70,9 +71,7 @@ export default function About() {
           {/* RIGHT ILLUSTRATION */}
           <div className="flex justify-center md:justify-end">
             <div className="relative">
-              {/* Soft glow */}
               <div className="absolute inset-0 bg-linear-to-r from-blue-600 to-purple-600 opacity-20 blur-2xl rounded-full" />
-
               <img
                 src="/assets/image/hero-ai-illustration.png"
                 alt="Developer Illustration"
@@ -83,27 +82,41 @@ export default function About() {
         </div>
 
         {/* EXPERIENCE STORY */}
-        <div className="max-w-4xl space-y-6 text-gray-700 dark:text-gray-300 mb-24">
+        <div className="max-w-4xl space-y-6 text-gray-700 dark:text-gray-300 mb-20">
           <p>
-            I began my professional journey as an <strong>Intern</strong>, where
-            I focused on frontend development and quickly adapted to building
-            real-world applications. Due to consistent performance and
-            ownership, I was later converted into a <strong>full-time
-            developer</strong> within the same organization.
+            I began my professional journey as an <strong>Intern</strong>,
+            where I focused on frontend development and quickly adapted to
+            building real-world applications. Through consistent delivery and
+            ownership, I was converted into a <strong>full-time developer</strong>
+            within the same organization.
           </p>
 
           <p>
-            During my tenure, I worked on admin dashboards, real-time
-            applications, and content-driven platforms, collaborating closely
-            with designers and backend teams to deliver production-ready
-            solutions.
+            Over time, I contributed to admin dashboards, real-time interfaces,
+            and content-driven platforms. I worked closely with designers,
+            backend engineers, and product stakeholders to deliver reliable,
+            production-ready features.
           </p>
 
           <p>
-            In <strong>November 2025</strong>, I decided to move on to explore new
-            challenges. I am currently <strong>actively looking for new
-            opportunities</strong> where I can contribute to impactful products
-            and continue growing as a frontend engineer.
+            In <strong>November 2025</strong>, I decided to step away to explore
+            new challenges and broaden my exposure. I am currently{" "}
+            <strong>actively seeking new opportunities</strong> where I can
+            contribute to meaningful products and continue growing as an
+            engineer.
+          </p>
+        </div>
+
+        {/* WHAT I WORK WITH */}
+        <div className="max-w-4xl mb-24">
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+            What I Work With
+          </h2>
+          <p className="text-gray-600 dark:text-gray-400">
+            My day-to-day work involves building React-based applications,
+            designing reusable component systems, integrating APIs, and
+            optimizing performance. I care deeply about code readability,
+            scalability, and long-term maintainability.
           </p>
         </div>
 
@@ -112,19 +125,19 @@ export default function About() {
           {[
             {
               title: "Scalable UI",
-              desc: "Reusable components with predictable structure.",
+              desc: "Component-driven architecture that grows with the product.",
             },
             {
               title: "Performance",
-              desc: "Optimized rendering and smooth user interactions.",
+              desc: "Fast rendering, efficient state management, smooth UX.",
             },
             {
-              title: "UX Focus",
-              desc: "Designing interfaces for clarity and usability.",
+              title: "UX First",
+              desc: "Designing interfaces with real users in mind.",
             },
             {
               title: "Ownership",
-              desc: "Responsible from idea to production delivery.",
+              desc: "Taking responsibility from idea to production.",
             },
           ].map((item) => (
             <div
