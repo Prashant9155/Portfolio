@@ -7,29 +7,46 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50">
+   <nav className="sticky top-0 z-50 backdrop-blur-md bg-white/70 dark:bg-neutral-900/70 border-b border-gray-200 dark:border-neutral-800">
+
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <h1 className="text-xl font-bold text-gray-900 dark:text-white">
-          Prashant<span className="text-blue-600">.dev</span>
+        <h1 className="text-xl font-bold">
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-purple-600">
+            Prashant
+          </span>
+          <span className="text-gray-900 dark:text-white">.dev</span>
         </h1>
+
+        {/* <img src="/logo.png" alt="logo" className="w-48 h-24" /> */}
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-6">
           {navLinks.map((link) => (
             <li key={link.name}>
-              <NavLink
-                to={link.path}
-                className={({ isActive }) =>
-                  `font-medium transition ${
-                    isActive
-                      ? "text-blue-600"
-                      : "text-gray-700 dark:text-gray-300 hover:text-blue-600"
-                  }`
-                }
-              >
-                {link.name}
-              </NavLink>
+            <NavLink
+  to={link.path}
+  className={({ isActive }) =>
+    `
+    relative font-medium transition-colors duration-300
+    ${
+      isActive
+        ? "text-blue-600"
+        : "text-gray-700 dark:text-gray-300 hover:text-blue-600"
+    }
+    after:absolute after:left-0 after:-bottom-1
+    after:h-0.5 after:w-full
+    after:origin-left after:scale-x-0
+    after:bg-linear-to-r after:from-blue-600 after:to-purple-600
+    after:transition-transform after:duration-300
+    hover:after:scale-x-100
+    ${isActive ? "after:scale-x-100" : ""}
+    `
+  }
+>
+  {link.name}
+</NavLink>
+
             </li>
           ))}
         </ul>
