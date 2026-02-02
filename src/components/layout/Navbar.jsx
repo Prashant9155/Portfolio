@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import navLinks from "../../data/navLinks";
 import ThemeToggle from "../common/ThemeToggle";
 
@@ -11,12 +11,12 @@ export default function Navbar() {
 
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <h1 className="text-xl font-bold">
+        <Link to="/" className="text-xl font-bold transition-transform duration-200 hover:scale-105">
           <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-purple-600">
             Prashant
           </span>
           <span className="text-gray-900 dark:text-white">.dev</span>
-        </h1>
+        </Link>
 
         {/* <img src="/logo.png" alt="logo" className="w-48 h-24" /> */}
 
@@ -37,7 +37,7 @@ export default function Navbar() {
     after:absolute after:left-0 after:-bottom-1
     after:h-0.5 after:w-full
     after:origin-left after:scale-x-0
-    after:bg-linear-to-r after:from-blue-600 after:to-purple-600
+    after:bg-gradient-to-r after:from-blue-600 after:to-purple-600
     after:transition-transform after:duration-300
     hover:after:scale-x-100
     ${isActive ? "after:scale-x-100" : ""}
