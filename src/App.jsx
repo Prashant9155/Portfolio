@@ -1,11 +1,15 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import ProjectCaseStudy from "./pages/ProjectCaseStudy"; // ✅ ADD THIS
+
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
+
 import CursorFollower from "./components/common/CursorFollower";
 import FloatingChat from "./components/common/FloatingChat";
 
@@ -31,6 +35,13 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
+
+            {/* ✅ CASE STUDY ROUTE */}
+            <Route
+              path="/projects/:id"
+              element={<ProjectCaseStudy />}
+            />
+
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
