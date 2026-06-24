@@ -1,59 +1,29 @@
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import Navbar from './components/layout/Navbar'
+import Hero from './components/sections/Hero'
+import Stats from './components/sections/Stats'
+import Experience from './components/sections/Experience'
+import Projects from './components/sections/Projects'
+import Skills from './components/sections/Skills'
+import AIChat from './components/sections/AIChat'
+import Contact from './components/sections/Contact'
+import Footer from './components/layout/Footer'
 
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Projects from "./pages/Projects";
-import Contact from "./pages/Contact";
-import ProjectCaseStudy from "./pages/ProjectCaseStudy"; // ✅ ADD THIS
-
-import Navbar from "./components/layout/Navbar";
-import Footer from "./components/layout/Footer";
-
-import CursorFollower from "./components/common/CursorFollower";
-import FloatingChat from "./components/common/FloatingChat";
-
-function ScrollToTop() {
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-
-  return null;
-}
-
-function App() {
+export default function App() {
   return (
-    <div className="min-h-screen bg-white dark:bg-neutral-900 transition-colors">
-      <BrowserRouter>
-        <ScrollToTop />
-        <Navbar />
+    <div className="theme-transition min-h-screen flex flex-col bg-white dark:bg-neutral-900 text-gray-900 dark:text-gray-100">
+      <Navbar />
+      <main className="flex-1 max-w-5xl mx-auto px-6 pb-2 w-full">
+        <Hero />
+        {/* <Stats /> */}
+        <br />
 
-        <main className="min-h-screen">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-
-            {/* ✅ CASE STUDY ROUTE */}
-            <Route
-              path="/projects/:id"
-              element={<ProjectCaseStudy />}
-            />
-
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-
-        <Footer />
-      </BrowserRouter>
-
-      {/* UI ENHANCEMENTS */}
-      <CursorFollower />
-      <FloatingChat />
+        <Experience />
+        <Projects />
+        <Skills />
+        <AIChat />
+        <Contact />
+      </main>
+      <Footer />
     </div>
-  );
+  )
 }
-
-export default App;

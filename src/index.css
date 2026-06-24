@@ -1,8 +1,6 @@
 @import "tailwindcss";
 
 /* ✅ ENABLE CLASS-BASED DARK MODE (Tailwind v4) */
-@custom-variant dark (&:where(.dark, .dark *));
-
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -11,11 +9,14 @@
   body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    @apply bg-white text-gray-900 transition-colors duration-200;
+    background-color: #ffffff;
+    color: #111827;
+    transition: background-color 200ms, color 200ms;
   }
 
   html.dark body {
-    @apply bg-neutral-900 text-gray-100;
+    background-color: #111827;
+    color: #f3f4f6;
   }
 }
 
@@ -46,4 +47,16 @@
 
 .animate-float {
   animation: float 6s ease-in-out infinite;
+}
+
+.theme-transition {
+  transition:
+    background-color 300ms ease,
+    color 300ms ease,
+    border-color 300ms ease,
+    box-shadow 300ms ease;
+  will-change:
+    background-color,
+    color,
+    border-color;
 }
