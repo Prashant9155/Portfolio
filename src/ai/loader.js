@@ -1,4 +1,4 @@
-import { knowledgeDocuments } from "../knowledge";
+import { knowledgeDocuments } from "../knowledge/index.js";
 
 export function loadKnowledge() {
   return knowledgeDocuments.map((doc) => ({

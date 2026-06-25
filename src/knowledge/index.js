@@ -1,22 +1,23 @@
-import profile from "./profile";
-import experience from "./experience";
-import projects from "./projects";
-import skills from "./skills";
-import education from "./education";
-import achievements from "./achievements";
-import interview from "./interview";
+import profile from "./profile.js";
+import experience from "./experience.js";
+import education from "./education.js";
+import skills from "./skills.js";
+import projects from "./projects.js";
+import achievements from "./achievements.js";
+import interview from "./interview.js";
 
-export const knowledgeBase = {
-  profile,
-  experience,
-  projects,
-  skills,
-  education,
-  achievements,
-  interview,
-};
 
 export const knowledgeDocuments = [
+  profile,
+  experience,
+  education,
+  skills,
+  projects,
+  achievements,
+  interview,
+];
+
+const prifile = [
   {
     id: "profile",
     title: "Professional Profile",
@@ -67,4 +68,4 @@ export const knowledgeDocuments = [
   },
 ];
 
-export default knowledgeBase;
+export default prifile;
