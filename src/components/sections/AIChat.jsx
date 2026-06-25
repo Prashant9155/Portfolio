@@ -76,19 +76,28 @@ setMessages((prev) => [
     id: typingId,
     role: "ai",
     typing: true,
+    text: "",
   },
 ]);
 
 try {
-  const res = await fetch("/api/chat", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      message: text,
-    }),
-  });
+ const history = messages
+  .filter((m) => !m.typing)
+  .map((m) => ({
+    role: m.role,
+    content: m.text,
+  }));
+
+const res = await fetch("/api/chat", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    message: text,
+    history,
+  }),
+});
 
   const data = await res.json();
 
@@ -96,15 +105,15 @@ try {
     throw new Error(data.message || "Request failed");
   }
 
-  setMessages((prev) =>
-    prev
-      .filter((m) => m.id !== typingId)
-      .concat({
-        id: crypto.randomUUID(),
-        role: "ai",
-        text: data.response,
-      })
-  );
+setMessages((prev) => [
+  ...prev.filter((m) => m.id !== typingId),
+  {
+    id: crypto.randomUUID(),
+    role: "ai",
+    text: data.response,
+    sources: data.sources || [],
+  },
+]);
 } catch (error) {
   console.error("Chat Error:", error);
 

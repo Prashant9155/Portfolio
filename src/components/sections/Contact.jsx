@@ -59,7 +59,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="w-full lg:w-[360px]">
+          <div className="w-full lg:w-90">
             <div className="space-y-3">
               {LINKS.map((link) => (
                 <a
