@@ -18,7 +18,7 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-gray-200 dark:border-neutral-800">
-      <div className="max-w-6xl mx-auto px-6 py-10">
+      <div className="max-w-6xl mx-auto px-6 md:px-6 md:py-10 py-6 ">
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
 
@@ -80,13 +80,13 @@ export default function Footer() {
 
         </div>
 
-        <div className="mt-10 pt-8 border-t border-gray-200 dark:border-neutral-800 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="mt-10  pt-8 border-t border-gray-200 dark:border-neutral-800 flex flex-col md:flex-row items-center justify-between gap-4">
 
-          <p className="text-sm text-gray-500 dark:text-gray-400">
+          <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400">
             © {year} Prashant Kumar. All rights reserved.
           </p>
 
-          <p className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+          <p className="flex items-center gap-2 text-xs md:text-sm text-gray-500 dark:text-gray-400">
             Built with
             <Heart
               size={15}

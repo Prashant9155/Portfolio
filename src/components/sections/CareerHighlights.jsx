@@ -56,10 +56,10 @@ export default function CareerHighlights() {
   return (
     <section
       id="career-highlights"
-      className="py-24 border-b border-gray-200 dark:border-neutral-800 bg-gray-50/60 dark:bg-neutral-900/40"
+      className="py-12 md:py-20 border-b border-gray-200 dark:border-neutral-800 "
     >
       <div className="mx-auto ">
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-10 md:mb-16">
           <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-gray-400">
             Career Highlights
           </p>
@@ -70,7 +70,7 @@ export default function CareerHighlights() {
             modern engineering practices.
           </h2>
 
-          <p className="text-lg leading-8 text-gray-600 dark:text-gray-400">
+          <p className="text-sm leading-6 md:text-lg md:leading-8 text-gray-600 dark:text-gray-400">
             Over the past three years I've helped build production web
             applications while expanding into backend engineering, cloud-native
             development and AI-powered products. I enjoy solving real business
@@ -88,7 +88,7 @@ export default function CareerHighlights() {
                 key={item.title}
                 className="group rounded-2xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-blue-300 dark:hover:border-blue-700"
               >
-                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 dark:bg-blue-900/20">
+                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl md:rounded-2xl bg-blue-50 dark:bg-blue-900/20">
                   <Icon
                     size={24}
                     className="text-blue-600 dark:text-blue-400"
@@ -96,16 +96,16 @@ export default function CareerHighlights() {
                 </div>
 
                 <div className="mb-5">
-                  <p className="text-3xl font-bold tracking-tight">
+                  <p className="text-2xl md:text-3xl font-bold tracking-tight">
                     {item.value}
                   </p>
 
-                  <h3 className="mt-2 text-lg font-semibold">
+                  <h3 className="mt-2 text-sm md:text-lg font-semibold">
                     {item.title}
                   </h3>
                 </div>
 
-                <p className="text-sm leading-7 text-gray-600 dark:text-gray-400">
+                <p className="text-xs md:text-sm leading-5 md:leading-7 text-gray-600 dark:text-gray-400">
                   {item.description}
                 </p>
               </div>

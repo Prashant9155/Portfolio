@@ -7,6 +7,7 @@ import Skills from './components/sections/Skills'
 import AIChat from './components/sections/AIChat'
 import Contact from './components/sections/Contact'
 import Footer from './components/layout/Footer'
+import FloatingAIButton from './components/sections/FloatingAIButton'
 import CareerHighlights from './components/sections/CareerHighlights'
 
 export default function App() {
@@ -28,14 +29,14 @@ export default function App() {
         <Hero />
         <About />
         <CareerHighlights />
-        <br />
-
         <Experience />
         <Projects />
         <Skills />
         <AIChat />
         <Contact />
+        <FloatingAIButton />
       </main>
+      
       <Footer />
     </div>
   )

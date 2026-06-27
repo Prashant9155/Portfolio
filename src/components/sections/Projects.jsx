@@ -28,7 +28,7 @@ const PROJECTS = [
       "Docker",
     ],
 
-    demo: "https://your-demo-link.com",
+    demo: "https://github.com/Prashant9155/next-round-ai",
     github: "https://github.com/Prashant9155/next-round-ai",
   },
 
@@ -59,7 +59,7 @@ const PROJECTS = [
       "PostgreSQL",
     ],
 
-    demo: "https://your-demo-link.com",
+    demo: "https://deployment-frontend-nirh.onrender.com/",
     github:
       "https://github.com/Prashant9155/deployment-control-platform",
   },
@@ -103,10 +103,10 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-24 border-b border-gray-200 dark:border-neutral-800 bg-gray-50/50 dark:bg-neutral-900/30"
+      className="py-12 md:py-20 border-b border-gray-200 dark:border-neutral-800"
     >
       <div className="max-w-6xl mx-auto">
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-10 md:mb-16">
           <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-gray-400 mb-4">
             Featured Projects
           </p>
@@ -117,7 +117,7 @@ export default function Projects() {
             with modern engineering.
           </h2>
 
-          <p className="text-lg leading-8 text-gray-600 dark:text-gray-400">
+          <p className="md:text-lg md:leading-8 text-sm leading-6 text-gray-600 dark:text-gray-400">
             A selection of personal projects demonstrating full-stack
             engineering, AI integration, cloud-native development and modern
             frontend architecture. Every project was independently designed and
@@ -125,11 +125,11 @@ export default function Projects() {
           </p>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-5 md:space-y-8">
           {PROJECTS.map((project) => (
             <div
               key={project.id}
-              className={`rounded-3xl border p-8 md:p-10 transition-all ${
+              className={`rounded-2xl lg:rounded-3xl border p-6 md:p-10 transition-all ${
                 project.featured
                   ? "border-blue-500/30 bg-blue-50/40 dark:bg-blue-900/10"
                   : "border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900"
@@ -138,7 +138,7 @@ export default function Projects() {
               <div className="flex flex-col lg:flex-row lg:justify-between gap-8">
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-4">
-                    <h3 className="text-2xl font-semibold">
+                    <h3 className="text-xl md:text-2xl font-semibold">
                       {project.title}
                     </h3>
 
@@ -149,11 +149,11 @@ export default function Projects() {
                     )}
                   </div>
 
-                  <p className="text-sm font-medium text-blue-600 dark:text-blue-400 mb-4">
+                  <p className="text-xs md:text-sm font-medium text-blue-600 dark:text-blue-400 mb-4">
                     {project.category}
                   </p>
 
-                  <p className="text-gray-600 dark:text-gray-400 leading-8 mb-8">
+                  <p className="text-gray-600 dark:text-gray-400 text-sm md:text-lg md:leading-8 leading-6 md:mb-8 mb-5">
                     {project.description}
                   </p>
 
@@ -165,7 +165,7 @@ export default function Projects() {
                       >
                         <div className="w-2 h-2 rounded-full bg-blue-500" />
 
-                        <span className="text-gray-600 dark:text-gray-400">
+                        <span className="text-gray-600 dark:text-gray-400 text-sm md:text-lg">
                           {item}
                         </span>
                       </div>
@@ -177,7 +177,7 @@ export default function Projects() {
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-medium hover:text-blue-600"
+                      className="font-medium hover:text-blue-600 md:text-lg text-sm"
                     >
                       Live Demo →
                     </a>
@@ -186,7 +186,7 @@ export default function Projects() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-medium hover:text-blue-600"
+                      className="font-medium hover:text-blue-600 md:text-lg text-sm"
                     >
                       GitHub →
                     </a>
@@ -202,7 +202,7 @@ export default function Projects() {
                     {project.tech.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-2 rounded-full text-sm border border-gray-200 dark:border-neutral-700 bg-gray-100 dark:bg-neutral-800"
+                        className="px-3 py-2 rounded-full text-xs md:text-sm border border-gray-200 dark:border-neutral-700 bg-gray-100 dark:bg-neutral-800"
                       >
                         {tech}
                       </span>

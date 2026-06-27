@@ -20,14 +20,14 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-24 border-b border-gray-200 dark:border-neutral-800"
+      className="py-12 md:py-20 border-b border-gray-200 dark:border-neutral-800"
     >
       <div className="max-w-6xl mx-auto">
         <p className="text-[11px] uppercase tracking-[0.2em] font-semibold text-gray-400 mb-5">
           About
         </p>
 
-        <div className="grid lg:grid-cols-[1.3fr_0.9fr] gap-16">
+        <div className="grid lg:grid-cols-[1.3fr_0.9fr] gap-8 md:gap-16">
           {/* Left */}
 
           <div>
@@ -37,7 +37,7 @@ export default function About() {
               and AI-powered applications.
             </h2>
 
-            <div className="space-y-6 text-gray-600 dark:text-gray-400 leading-8 text-lg">
+            <div className=" space-y-4 md:space-y-6 text-gray-600 dark:text-gray-400 leading-6 md:leading-8 text-sm md:text-lg">
               <p>
                 I'm{" "}
                 <span className="font-semibold text-gray-900 dark:text-white">

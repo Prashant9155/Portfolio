@@ -34,45 +34,45 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-24"
+      className="py-12 md:py-20 "
     >
-      <div className="rounded-[32px] border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 overflow-hidden">
+      <div className="rounded-2xl md:rounded-4xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 overflow-hidden">
 
         <div className="grid lg:grid-cols-[1.2fr_420px]">
 
           {/* Left */}
 
-          <div className="p-10 md:p-14">
+          <div className="p-4 md:p-14">
 
-            <div className="inline-flex items-center gap-2 rounded-full border border-green-200 dark:border-green-900 bg-green-50 dark:bg-green-900/20 px-4 py-2 text-sm font-medium text-green-700 dark:text-green-400 mb-8">
+            <div className="inline-flex items-center gap-2 rounded-full border border-green-200 dark:border-green-900 bg-green-50 dark:bg-green-900/20 px-4 py-2 text-xs md:text-sm font-medium text-green-700 dark:text-green-400 mb-5 md:mb-8">
               <span className="w-2 h-2 rounded-full bg-green-500" />
               Available for Full-Time Opportunities
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-semibold tracking-tight leading-tight mb-6">
+            <h2 className="text-3xl md:text-5xl font-semibold tracking-tight leading-tight mb-6">
               Let's build
               <br />
               something impactful.
             </h2>
 
-            <p className="text-lg leading-8 text-gray-600 dark:text-gray-400 max-w-2xl mb-10">
+            <p className="text-xs md:text-lg text-wrap leading-6 md:leading-8 text-gray-600 dark:text-gray-400 max-w-xl mb-6 md:mb-10">
               I'm currently looking for Full-Stack and Frontend Engineering
               opportunities where I can contribute to building scalable
               products, solve meaningful engineering problems and continue
               growing in AI-powered application development.
             </p>
 
-            <div className="flex flex-wrap gap-3 mb-10">
+            <div className="flex flex-wrap gap-2 md:gap-3 mb-6 md:mb-10">
 
-              <span className="rounded-full bg-gray-100 dark:bg-neutral-800 px-4 py-2 text-sm">
+              <span className="rounded-full bg-gray-100 dark:bg-neutral-800 md:px-4 md:py-2 p-2 text-xs md:text-sm">
                 📍 Patna, India
               </span>
 
-              <span className="rounded-full bg-gray-100 dark:bg-neutral-800 px-4 py-2 text-sm">
+              <span className="rounded-full bg-gray-100 dark:bg-neutral-800 md:px-4 md:py-2 p-2 text-xs md:text-sm">
                 🚀 Immediate Joiner
               </span>
 
-              <span className="rounded-full bg-gray-100 dark:bg-neutral-800 px-4 py-2 text-sm">
+              <span className="rounded-full bg-gray-100 dark:bg-neutral-800 md:px-4 md:py-2 p-2 text-xs md:text-sm">
                 🌍 Open to Relocation
               </span>
 
@@ -82,7 +82,7 @@ export default function Contact() {
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 rounded-xl bg-blue-600 hover:bg-blue-700 transition-colors px-6 py-4 text-white font-medium"
+              className="inline-flex items-center gap-3 rounded-lg md:rounded-xl bg-blue-600 hover:bg-blue-700 transition-colors md:px-6 md:py-4 p-3 text-white font-medium text-sm md:text-lg"
             >
               <Download size={18} />
               Download Resume
@@ -92,9 +92,9 @@ export default function Contact() {
 
           {/* Right */}
 
-          <div className="border-t lg:border-t-0 lg:border-l border-gray-200 dark:border-neutral-800 bg-gray-50/60 dark:bg-neutral-950/50 p-10">
+          <div className="border-t lg:border-t-0 lg:border-l border-gray-200 dark:border-neutral-800 bg-gray-50/60 dark:bg-neutral-950/50 p-4 md:p-10">
 
-            <h3 className="text-xl font-semibold mb-8">
+            <h3 className="text-lg md:text-xl font-semibold p-4 md:mb-8">
               Get in Touch
             </h3>
 
@@ -113,9 +113,9 @@ export default function Contact() {
                           rel: "noopener noreferrer",
                         }
                       : {})}
-                    className="group flex items-center justify-between rounded-2xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-5 hover:border-blue-400 transition-all"
+                    className="group flex items-center justify-between rounded-xl md:rounded-2xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-3 md:p-5 hover:border-blue-400 transition-all"
                   >
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center md:gap-4 gap-2">
 
                       <div className="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center">
                         <Icon
@@ -125,11 +125,11 @@ export default function Contact() {
                       </div>
 
                       <div>
-                        <p className="font-medium">
+                        <p className="font-medium text-sm md:text-lg">
                           {item.label}
                         </p>
 
-                        <p className="text-sm text-gray-500 dark:text-gray-400">
+                        <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400">
                           {item.value}
                         </p>
                       </div>
@@ -147,7 +147,7 @@ export default function Contact() {
 
             </div>
 
-            <div className="mt-10 rounded-2xl bg-blue-50 dark:bg-blue-900/10 border border-blue-100 dark:border-blue-900 p-6">
+            <div className="mt-6 md:mt-10 rounded-xl md:rounded-2xl bg-blue-50 dark:bg-blue-900/10 border border-blue-100 dark:border-blue-900 p-4 md:p-6">
 
               <div className="flex items-start gap-3">
 
@@ -158,11 +158,11 @@ export default function Contact() {
 
                 <div>
 
-                  <h4 className="font-semibold mb-2">
+                  <h4 className="font-semibold text-sm md:text-lg mb-2">
                     Preferred Locations
                   </h4>
 
-                  <p className="text-sm leading-6 text-gray-600 dark:text-gray-400">
+                  <p className="text-[10px] md:text-sm leading-6 text-gray-600 dark:text-gray-400">
                     Bengaluru • Noida • Gurugram • Remote
                   </p>
 

@@ -103,10 +103,10 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="py-24 border-b border-gray-200 dark:border-neutral-800"
+      className="py-10 md:py-20 border-b border-gray-200 dark:border-neutral-800"
     >
       <div className="max-w-6xl mx-auto">
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-10 md:mb-16">
           <p className="mb-4 text-[11px] uppercase tracking-[0.2em] font-semibold text-gray-400">
             Skills & Technologies
           </p>
@@ -117,7 +117,7 @@ export default function Skills() {
             across the modern web stack.
           </h2>
 
-          <p className="text-lg leading-8 text-gray-600 dark:text-gray-400">
+          <p className="md:text-lg md:leading-8 text-sm leading-6 text-gray-600 dark:text-gray-400">
             My experience spans frontend development, backend engineering,
             AI-powered applications, cloud infrastructure and modern developer
             tooling. I enjoy building scalable products with clean architecture
@@ -132,7 +132,7 @@ export default function Skills() {
             return (
               <div
                 key={group.title}
-                className="rounded-3xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-7 transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 dark:hover:border-blue-700 hover:shadow-xl"
+                className="rounded-2xl md:rounded-3xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-4 md:p-7 transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 dark:hover:border-blue-700 hover:shadow-xl"
               >
                 <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 dark:bg-blue-900/20">
                   <Icon
@@ -141,7 +141,7 @@ export default function Skills() {
                   />
                 </div>
 
-                <h3 className="text-xl font-semibold mb-3">
+                <h3 className="text-lg md:text-xl font-semibold mb-3">
                   {group.title}
                 </h3>
 
@@ -153,7 +153,7 @@ export default function Skills() {
                   {group.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="rounded-full border border-gray-200 dark:border-neutral-700 bg-gray-100 dark:bg-neutral-800 px-3 py-2 text-sm"
+                      className="rounded-full border border-gray-200 dark:border-neutral-700 bg-gray-100 dark:bg-neutral-800 px-3 py-2 text-xs md:text-sm"
                     >
                       {skill}
                     </span>

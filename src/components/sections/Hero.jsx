@@ -23,27 +23,23 @@ export default function Hero() {
       dark:border-neutral-800
     "
     >
-      <div className="max-w-6xl mx-auto py-20 md:py-12">
-        <div className="grid lg:grid-cols-[1.2fr_420px] gap-16 items-center">
+      <div className="max-w-6xl mx-auto py-8 md:py-16">
+        <div className="grid lg:grid-cols-[1.2fr_420px] gap-8 items-center">
           {/* Left */}
 
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-green-200 bg-green-50 px-4 py-2 text-sm font-medium text-green-700 dark:border-green-900 dark:bg-green-900/20 dark:text-green-400 mb-8">
+            <div className="inline-flex items-center gap-2 rounded-full border border-green-200 bg-green-50 px-4 py-2 text-xs md:text-sm font-medium text-green-700 dark:border-green-900 dark:bg-green-900/20 dark:text-green-400 md:mb-8 mb-6">
               <span className="h-2 w-2 rounded-full bg-green-500" />
               Available for Full-Time Opportunities
             </div>
 
-            <p className="text-lg text-gray-500 dark:text-gray-400 mb-4">
-              Hi, I'm
-            </p>
-
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-[1.05] mb-8">
+            <h1 className="text-4xl md:text-7xl font-bold tracking-tight leading-[1.05] mb-6 md:mb-8">
               Prashant
               <br />
               Kumar.
             </h1>
 
-            <h2 className="text-2xl md:text-4xl font-semibold leading-tight mb-8 text-gray-800 dark:text-gray-200">
+            <h2 className="text-3xl md:text-4xl font-semibold leading-tight mb-6 md:mb-8 text-gray-800 dark:text-gray-200">
               Building AI-powered
               <br />
               Full-Stack Applications
@@ -51,7 +47,7 @@ export default function Hero() {
               with React & Node.js.
             </h2>
 
-            <p className="max-w-2xl text-lg leading-8 text-gray-600 dark:text-gray-400 mb-10">
+            <p className="max-w-2xl text-sm md:text-lg leading-6 md:leading-8 text-gray-600 dark:text-gray-400 mb-6 md:mb-10">
               Full-Stack Engineer with 3+ years of experience building
               production-grade web applications, AI-powered products and modern
               developer tools using React, Next.js, Node.js, PostgreSQL and
@@ -63,7 +59,7 @@ export default function Hero() {
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl bg-gray-900 dark:bg-white text-white dark:text-black px-6 py-3 font-medium hover:opacity-90 transition"
+                className="inline-flex items-center gap-2 rounded-lg md:rounded-xl bg-gray-900 dark:bg-white text-white dark:text-black px-6 py-3 font-medium hover:opacity-90 transition"
               >
                 <Download size={18} />
                 Resume
@@ -97,7 +93,7 @@ export default function Hero() {
 
           {/* Right */}
 
-          <div className="mx-auto w-full max-w-sm">
+          <div className="mx-auto w-full max-w-md">
             <div className="overflow-hidden rounded-3xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-xl">
               <img
                 src="/assets/image/me.png"

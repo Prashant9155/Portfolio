@@ -53,10 +53,10 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="py-24 border-b border-gray-200 dark:border-neutral-800"
+      className="py-12 md:py-20 border-b border-gray-200 dark:border-neutral-800"
     >
       <div className="max-w-6xl mx-auto">
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-10 md:mb-16">
           <p className="mb-4 text-[11px] uppercase tracking-[0.2em] font-semibold text-gray-400">
             Professional Experience
           </p>
@@ -67,7 +67,7 @@ export default function Experience() {
             for real-world users.
           </h2>
 
-          <p className="text-lg leading-8 text-gray-600 dark:text-gray-400">
+          <p className="md:text-lg md:leading-8 text-sm leading-6 text-gray-600 dark:text-gray-400">
             Over the past three years I've contributed to multiple production
             applications, collaborated with cross-functional teams and helped
             deliver scalable web experiences using modern frontend and backend
@@ -75,19 +75,19 @@ export default function Experience() {
           </p>
         </div>
 
-        <div className="rounded-3xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 overflow-hidden">
-          <div className="p-10 border-b border-gray-200 dark:border-neutral-800">
+        <div className=" rounded-2xl md:rounded-3xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 overflow-hidden">
+          <div className="p-6 md:p-10 border-b border-gray-200 dark:border-neutral-800">
             <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
               <div>
-                <h3 className="text-2xl font-semibold mb-2">
+                <h3 className="text-xl md:text-2xl font-semibold mb-2">
                   {EXPERIENCE.role}
                 </h3>
 
-                <p className="text-gray-600 dark:text-gray-400">
+                <p className="text-gray-600 dark:text-gray-400 text-sm">
                   {EXPERIENCE.company}
                 </p>
 
-                <p className="text-sm mt-2 text-gray-500">
+                <p className="text-xs md:text-sm mt-2 text-gray-500">
                   {EXPERIENCE.location}
                 </p>
               </div>
@@ -97,26 +97,26 @@ export default function Experience() {
               </div>
             </div>
 
-            <p className="mt-8 max-w-4xl text-gray-600 dark:text-gray-400 leading-8">
+            <p className="mt-6 md:mt-8 max-w-4xl text-gray-600 dark:text-gray-400 text-sm md:text-lg leading-8">
               {EXPERIENCE.overview}
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2">
-            <div className="p-10 border-b lg:border-b-0 lg:border-r border-gray-200 dark:border-neutral-800">
-              <h4 className="font-semibold text-lg mb-6">
+            <div className="p-6 md:p-10 border-b lg:border-b-0 lg:border-r border-gray-200 dark:border-neutral-800">
+              <h4 className="font-semibold text-sm md:text-lg mb-4 md:mb-6">
                 Key Contributions
               </h4>
 
-              <div className="space-y-5">
+              <div className="space-y-3 md:space-y-5">
                 {EXPERIENCE.contributions.map((item) => (
                   <div
                     key={item}
-                    className="flex items-start gap-4"
+                    className="flex items-start gap-3 md:gap-4"
                   >
-                    <div className="mt-2 w-3 h-2 rounded-full bg-blue-500" />
+                    <div className="mt-2 w-4 h-2 rounded-full bg-blue-500" />
 
-                    <p className="text-gray-600 dark:text-gray-400 leading-7">
+                    <p className="text-gray-600 dark:text-gray-400 text-sm md:text-lg md:leading-7">
                       {item}
                     </p>
                   </div>
@@ -124,8 +124,8 @@ export default function Experience() {
               </div>
             </div>
 
-            <div className="p-10">
-              <h4 className="font-semibold text-lg mb-6">
+            <div className="p-6 md:p-10">
+              <h4 className="font-semibold text-lg mb-4 md:mb-6">
                 Products Contributed
               </h4>
 
@@ -146,7 +146,7 @@ export default function Experience() {
                 ))}
               </div>
 
-              <h4 className="font-semibold text-lg mb-5">
+              <h4 className="font-semibold md:text-lg md:mb-5 text-sm mb-4">
                 Technologies
               </h4>
 
@@ -154,7 +154,7 @@ export default function Experience() {
                 {EXPERIENCE.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-2 rounded-full text-sm border border-gray-200 dark:border-neutral-700 bg-gray-50 dark:bg-neutral-800"
+                    className="px-3 py-2 rounded-full text-xs md:text-sm border border-gray-200 dark:border-neutral-700 bg-gray-50 dark:bg-neutral-800"
                   >
                     {tech}
                   </span>
