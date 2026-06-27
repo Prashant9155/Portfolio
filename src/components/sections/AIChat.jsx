@@ -330,25 +330,6 @@ export default function AIChat() {
                       {message.text}
                     </div>
                   )}
-
-                  {!message.typing && message.role === "ai" && message.sources?.length > 0 && (
-                    <div className="mt-4">
-                      <p className="text-xs uppercase tracking-wider text-gray-400 mb-3">
-                        Knowledge Sources
-                      </p>
-
-                      <div className="flex flex-wrap gap-2">
-                        {message.sources.map((source) => (
-                          <span
-                            key={source}
-                            className="px-3 py-1 rounded-full text-xs border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300"
-                          >
-                            {source}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  )}
                 </div>
 
                 {message.role === "user" && (
