@@ -1,22 +1,35 @@
-import { Code2, ArrowUpRight } from "lucide-react";
+import {
+  BrainCircuit,
+  Cloud,
+  Code2,
+  Database,
+  GitBranch,
+  Server,
+} from "lucide-react";
 
 const SKILL_GROUPS = [
   {
+    icon: Code2,
     title: "Frontend Engineering",
-    description: "React ecosystem and UI development",
+    description:
+      "Building responsive, scalable and high-performance user interfaces.",
     skills: [
-      "Figma",
       "React.js",
       "Next.js",
       "JavaScript",
+      "TypeScript",
       "Redux Toolkit",
       "React Query",
       "Tailwind CSS",
+      "Responsive Design",
     ],
   },
+
   {
-    title: "Backend Development",
-    description: "APIs and server-side applications",
+    icon: Server,
+    title: "Backend Engineering",
+    description:
+      "Designing APIs, authentication and scalable server-side applications.",
     skills: [
       "Node.js",
       "Express.js",
@@ -27,120 +40,129 @@ const SKILL_GROUPS = [
       "Prisma",
     ],
   },
+
   {
+    icon: BrainCircuit,
+    title: "AI Engineering",
+    description:
+      "Building intelligent applications using modern LLMs and RAG pipelines.",
+    skills: [
+      "LangChain",
+      "RAG",
+      "Groq",
+      "Ollama",
+      "OpenAI APIs",
+      "Prompt Engineering",
+    ],
+  },
+
+  {
+    icon: Database,
     title: "Databases",
-    description: "Data storage and realtime systems",
-    skills: ["PostgreSQL", "MongoDB", "Firebase", "Realtime DB"],
+    description:
+      "Working with relational, NoSQL and realtime databases.",
+    skills: [
+      "PostgreSQL",
+      "MongoDB",
+      "Firebase",
+      "Realtime Database",
+    ],
   },
+
   {
+    icon: Cloud,
     title: "Cloud & DevOps",
-    description: "Deployment and infrastructure",
-    skills: ["Docker", "AWS Lambda", "CI/CD", "Vercel"],
+    description:
+      "Deployment automation and cloud-native development workflows.",
+    skills: [
+      "Docker",
+      "AWS Lambda",
+      "CI/CD",
+      "Vercel",
+      "GitHub Actions",
+    ],
   },
+
   {
-    title: "AI & LLM",
-    description: "AI-powered product development",
-    skills: ["Ollama", "Groq", "LangChain", "RAG"],
-  },
-  {
-    title: "Tools & Testing",
-    description: "Development workflow",
+    icon: GitBranch,
+    title: "Developer Workflow",
+    description:
+      "Tools used throughout the software development lifecycle.",
     skills: [
       "Git",
       "GitHub",
       "Postman",
-      "Jest",
-      "React Testing Library",
+      "Figma",
       "Jira",
+      "VS Code",
     ],
   },
 ];
 
 export default function Skills() {
   return (
-    <section id="skills" className="mb-24">
-      {" "}
-      <div className="mb-12">
-        {" "}
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          {" "}
-          <div>
-            {" "}
-            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-gray-400 mb-4">
-              Skills{" "}
-            </p>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-3">
-              Technologies & Tools
-            </h2>
-            <p className="max-w-2xl text-gray-500 dark:text-gray-400">
-              Building scalable web applications using modern frontend, backend,
-              cloud and AI technologies.
-            </p>
-          </div>
+    <section
+      id="skills"
+      className="py-24 border-b border-gray-200 dark:border-neutral-800"
+    >
+      <div className="max-w-6xl mx-auto">
+        <div className="max-w-3xl mb-16">
+          <p className="mb-4 text-[11px] uppercase tracking-[0.2em] font-semibold text-gray-400">
+            Skills & Technologies
+          </p>
+
+          <h2 className="text-3xl md:text-5xl font-semibold tracking-tight leading-tight mb-6">
+            Engineering skills
+            <br />
+            across the modern web stack.
+          </h2>
+
+          <p className="text-lg leading-8 text-gray-600 dark:text-gray-400">
+            My experience spans frontend development, backend engineering,
+            AI-powered applications, cloud infrastructure and modern developer
+            tooling. I enjoy building scalable products with clean architecture
+            and maintainable code.
+          </p>
         </div>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-        {SKILL_GROUPS.map((group) => (
-          <div
-            key={group.title}
-            className="
-          group
-          relative
-          overflow-hidden
-          rounded-3xl
-          border
-          border-gray-200
-          dark:border-neutral-800
-          p-6
-          transition-all
-          duration-300
-          hover:-translate-y-1
-          hover:border-blue-500/30
-          hover:shadow-[0_20px_40px_rgba(59,130,246,0.08)]
-        "
-          >
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-linear-to-br from-blue-500/5 via-transparent to-purple-500/5" />
 
-            <div className="relative z-10">
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-3">
-                  <Code2 size={18} />
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {SKILL_GROUPS.map((group) => {
+            const Icon = group.icon;
 
-                  <h3 className="text-xl font-semibold">{group.title}</h3>
+            return (
+              <div
+                key={group.title}
+                className="rounded-3xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-7 transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 dark:hover:border-blue-700 hover:shadow-xl"
+              >
+                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 dark:bg-blue-900/20">
+                  <Icon
+                    size={22}
+                    className="text-blue-600 dark:text-blue-400"
+                  />
+                </div>
+
+                <h3 className="text-xl font-semibold mb-3">
+                  {group.title}
+                </h3>
+
+                <p className="text-sm leading-6 text-gray-600 dark:text-gray-400 mb-6">
+                  {group.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2">
+                  {group.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="rounded-full border border-gray-200 dark:border-neutral-700 bg-gray-100 dark:bg-neutral-800 px-3 py-2 text-sm"
+                    >
+                      {skill}
+                    </span>
+                  ))}
                 </div>
               </div>
-
-              <p className="text-sm text-gray-500 dark:text-gray-400 mb-5">
-                {group.description}
-              </p>
-
-              {/* <p className="text-sm font-medium mb-4">
-                {group.skills.length} Technologies
-              </p> */}
-
-              <div className="flex flex-wrap gap-2">
-                {group.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="
-                  text-xs
-                  px-3
-                  py-2
-                  rounded-full
-                  border
-                  border-gray-200
-                  dark:border-neutral-700
-                  bg-white/50
-                  dark:bg-neutral-900/50
-                "
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        ))}
+            );
+          })}
+        </div>
       </div>
     </section>
   );

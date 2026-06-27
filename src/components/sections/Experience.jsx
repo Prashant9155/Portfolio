@@ -1,88 +1,168 @@
-const EXPERIENCE = [
-  {
-    role: "Software Engineer",
-    company: "Indiclancers Technology Pvt. Ltd.",
-    location: "Noida, India",
-    date: "Jul 2023 – Present",
-    achievements: [
-      "Developed and maintained production-grade web applications using React.js, Next.js, JavaScript and TypeScript.",
-      "Built reusable UI components and scalable frontend architecture to improve development efficiency.",
-      "Integrated 20+ REST APIs and implemented real-time functionality using Firebase and WebSocket connections.",
-      "Collaborated closely with designers, backend engineers and QA teams to deliver new product features.",
-      "Optimized application performance through lazy loading, code splitting and component-level optimization.",
-      "Contributed to products across EdTech and service platforms with a focus on user experience and maintainability.",
-    ],
-    tags: [
-      "React.js",
-      "Next.js",
-      "JavaScript",
-      "Redux Toolkit",
-      "Node.js",
-      "Firebase",
-      "REST APIs",
-      "WebSocket",
-    ],
-  },
-];
+const EXPERIENCE = {
+  role: "Software Engineer",
+  company: "IndicArena Technology Pvt. Ltd.",
+  location: "Remote, India",
+  duration: "July 2023 – Present",
+
+  overview:
+    "Contributed to the development of multiple production-grade web applications across EdTech, climate-tech and service platforms. Primarily focused on frontend engineering while gradually expanding into full-stack development through backend APIs, cloud services and AI-powered applications.",
+
+  contributions: [
+    "Developed scalable applications using React.js, Next.js, JavaScript and TypeScript.",
+    "Built reusable component architecture to improve consistency and development efficiency.",
+    "Integrated 20+ REST APIs along with Firebase Realtime Database and WebSocket-based features.",
+    "Optimized application performance using lazy loading, code splitting and rendering optimizations.",
+    "Collaborated closely with product managers, designers, backend engineers and QA teams.",
+    "Maintained production applications and delivered new features with a focus on scalability and maintainability.",
+  ],
+
+  products: [
+    {
+      name: "Elympiad",
+      description:
+        "Online quiz and assessment platform for schools and educational organizations.",
+    },
+    {
+      name: "Wildflower Labs",
+      description:
+        "Climate-tech platform focused on sustainability initiatives and environmental solutions.",
+    },
+    {
+      name: "Maideaze",
+      description:
+        "Service management platform for connecting users with home service professionals.",
+    },
+  ],
+
+  technologies: [
+    "React.js",
+    "Next.js",
+    "JavaScript",
+    "TypeScript",
+    "Redux Toolkit",
+    "Node.js",
+    "Firebase",
+    "REST APIs",
+    "GraphQL",
+    "WebSocket",
+    "Git",
+  ],
+};
 
 export default function Experience() {
   return (
-    <section id="experience" className="mb-24">
-      <div className="mb-12">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-gray-400 dark:text-gray-500 mb-4">
-          Experience{" "}
-        </p>
-        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
-          Professional Experience
-        </h2>
-        <p className="max-w-3xl text-gray-500 dark:text-gray-400 leading-relaxed">
-          Full-Stack Developer with 3+ years of experience building
-          production-grade web applications using React.js, Next.js, TypeScript
-          and Node.js. Experienced in frontend architecture, API integrations,
-          real-time applications and delivering scalable user experiences.
-        </p>
-      </div>
-      <div className="border border-gray-200 dark:border-neutral-800 rounded-2xl overflow-hidden bg-white dark:bg-neutral-900">
-        {EXPERIENCE.map((exp) => (
-          <div key={exp.role} className="p-8 md:p-10">
-            <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-6">
-              <div>
-                <h3 className="text-xl font-semibold mb-1">{exp.role}</h3>
+    <section
+      id="experience"
+      className="py-24 border-b border-gray-200 dark:border-neutral-800"
+    >
+      <div className="max-w-6xl mx-auto">
+        <div className="max-w-3xl mb-16">
+          <p className="mb-4 text-[11px] uppercase tracking-[0.2em] font-semibold text-gray-400">
+            Professional Experience
+          </p>
 
-                <p className="text-gray-500 dark:text-gray-400">
-                  {exp.company} · {exp.location}
+          <h2 className="text-3xl md:text-5xl font-semibold tracking-tight leading-tight mb-6">
+            Building production software
+            <br />
+            for real-world users.
+          </h2>
+
+          <p className="text-lg leading-8 text-gray-600 dark:text-gray-400">
+            Over the past three years I've contributed to multiple production
+            applications, collaborated with cross-functional teams and helped
+            deliver scalable web experiences using modern frontend and backend
+            technologies.
+          </p>
+        </div>
+
+        <div className="rounded-3xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 overflow-hidden">
+          <div className="p-10 border-b border-gray-200 dark:border-neutral-800">
+            <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
+              <div>
+                <h3 className="text-2xl font-semibold mb-2">
+                  {EXPERIENCE.role}
+                </h3>
+
+                <p className="text-gray-600 dark:text-gray-400">
+                  {EXPERIENCE.company}
+                </p>
+
+                <p className="text-sm mt-2 text-gray-500">
+                  {EXPERIENCE.location}
                 </p>
               </div>
 
-              <div className="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">
-                {exp.date}
+              <div className="inline-flex items-center rounded-full bg-blue-50 dark:bg-blue-900/20 px-4 py-2 text-sm font-medium text-blue-600 dark:text-blue-400">
+                {EXPERIENCE.duration}
               </div>
             </div>
 
-            <ul className="space-y-3 mb-8">
-              {exp.achievements.map((item) => (
-                <li
-                  key={item}
-                  className="flex gap-3 text-gray-600 dark:text-gray-400 leading-relaxed"
-                >
-                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-gray-400 shrink-0" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+            <p className="mt-8 max-w-4xl text-gray-600 dark:text-gray-400 leading-8">
+              {EXPERIENCE.overview}
+            </p>
+          </div>
 
-            <div className="flex flex-wrap gap-2">
-              {exp.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="px-3 py-1.5 text-xs rounded-full border border-gray-200 dark:border-neutral-700 bg-gray-50 dark:bg-neutral-800 text-gray-600 dark:text-gray-400"
-                >
-                  {tag}
-                </span>
-              ))}
+          <div className="grid lg:grid-cols-2">
+            <div className="p-10 border-b lg:border-b-0 lg:border-r border-gray-200 dark:border-neutral-800">
+              <h4 className="font-semibold text-lg mb-6">
+                Key Contributions
+              </h4>
+
+              <div className="space-y-5">
+                {EXPERIENCE.contributions.map((item) => (
+                  <div
+                    key={item}
+                    className="flex items-start gap-4"
+                  >
+                    <div className="mt-2 w-3 h-2 rounded-full bg-blue-500" />
+
+                    <p className="text-gray-600 dark:text-gray-400 leading-7">
+                      {item}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="p-10">
+              <h4 className="font-semibold text-lg mb-6">
+                Products Contributed
+              </h4>
+
+              <div className="space-y-6 mb-10">
+                {EXPERIENCE.products.map((product) => (
+                  <div
+                    key={product.name}
+                    className="rounded-xl border border-gray-200 dark:border-neutral-800 p-5"
+                  >
+                    <h5 className="font-semibold mb-2">
+                      {product.name}
+                    </h5>
+
+                    <p className="text-sm leading-6 text-gray-600 dark:text-gray-400">
+                      {product.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <h4 className="font-semibold text-lg mb-5">
+                Technologies
+              </h4>
+
+              <div className="flex flex-wrap gap-2">
+                {EXPERIENCE.technologies.map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-3 py-2 rounded-full text-sm border border-gray-200 dark:border-neutral-700 bg-gray-50 dark:bg-neutral-800"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
-        ))}
+        </div>
       </div>
     </section>
   );

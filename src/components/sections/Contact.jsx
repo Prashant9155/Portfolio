@@ -1,18 +1,30 @@
+import {
+  ArrowUpRight,
+  Download,
+  Github,
+  Linkedin,
+  Mail,
+  MapPin,
+} from "lucide-react";
+
 const LINKS = [
   {
+    icon: Mail,
     label: "Email",
-    value: "[prashantsin2gh@gmail.com](mailto:prashantsin2gh@gmail.com)",
+    value: "prashantsin2gh@gmail.com",
     href: "mailto:prashantsin2gh@gmail.com",
   },
   {
+    icon: Linkedin,
     label: "LinkedIn",
-    value: "Connect",
+    value: "linkedin.com/in/prashantkumar-sde",
     href: "https://linkedin.com/in/prashantkumar-sde",
     external: true,
   },
   {
+    icon: Github,
     label: "GitHub",
-    value: "View Projects",
+    value: "github.com/Prashant9155",
     href: "https://github.com/Prashant9155",
     external: true,
   },
@@ -20,84 +32,152 @@ const LINKS = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="mb-24">
-      {" "}
-      <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-gray-400 mb-4">
-        Contact{" "}
-      </p>
-      <div className="rounded-3xl border border-gray-200 dark:border-neutral-800 p-8 md:p-10 bg-white dark:bg-neutral-900">
-        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-10">
-          <div className="max-w-xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-green-50 dark:bg-green-900/20 text-green-600 border border-green-200 dark:border-green-800 mb-5">
+    <section
+      id="contact"
+      className="py-24"
+    >
+      <div className="rounded-[32px] border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 overflow-hidden">
+
+        <div className="grid lg:grid-cols-[1.2fr_420px]">
+
+          {/* Left */}
+
+          <div className="p-10 md:p-14">
+
+            <div className="inline-flex items-center gap-2 rounded-full border border-green-200 dark:border-green-900 bg-green-50 dark:bg-green-900/20 px-4 py-2 text-sm font-medium text-green-700 dark:text-green-400 mb-8">
               <span className="w-2 h-2 rounded-full bg-green-500" />
-              Open To Opportunities
+              Available for Full-Time Opportunities
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
-              Let's Build Something Great Together
+            <h2 className="text-4xl md:text-5xl font-semibold tracking-tight leading-tight mb-6">
+              Let's build
+              <br />
+              something impactful.
             </h2>
 
-            <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
-              I'm a Full-Stack Developer with 3+ years of experience building
-              scalable web applications using React.js, Next.js, Node.js and
-              modern cloud technologies. Currently open to full-time roles,
-              remote opportunities, and exciting product teams.
+            <p className="text-lg leading-8 text-gray-600 dark:text-gray-400 max-w-2xl mb-10">
+              I'm currently looking for Full-Stack and Frontend Engineering
+              opportunities where I can contribute to building scalable
+              products, solve meaningful engineering problems and continue
+              growing in AI-powered application development.
             </p>
 
-            <div className="flex flex-wrap gap-3">
-              <span className="px-3 py-2 rounded-lg bg-gray-100 dark:bg-neutral-800 text-sm">
-                📍 Patna, Bihar
+            <div className="flex flex-wrap gap-3 mb-10">
+
+              <span className="rounded-full bg-gray-100 dark:bg-neutral-800 px-4 py-2 text-sm">
+                📍 Patna, India
               </span>
 
-              <span className="px-3 py-2 rounded-lg bg-gray-100 dark:bg-neutral-800 text-sm">
-                💼 Immediate Joiner
+              <span className="rounded-full bg-gray-100 dark:bg-neutral-800 px-4 py-2 text-sm">
+                🚀 Immediate Joiner
               </span>
 
-              <span className="px-3 py-2 rounded-lg bg-gray-100 dark:bg-neutral-800 text-sm">
-                🌍 Remote / Relocation
+              <span className="rounded-full bg-gray-100 dark:bg-neutral-800 px-4 py-2 text-sm">
+                🌍 Open to Relocation
               </span>
+
             </div>
+
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 rounded-xl bg-blue-600 hover:bg-blue-700 transition-colors px-6 py-4 text-white font-medium"
+            >
+              <Download size={18} />
+              Download Resume
+            </a>
+
           </div>
 
-          <div className="w-full lg:w-90">
-            <div className="space-y-3">
-              {LINKS.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  {...(link.external
-                    ? {
-                        target: "_blank",
-                        rel: "noopener noreferrer",
-                      }
-                    : {})}
-                  className="flex items-center justify-between rounded-xl border border-gray-200 dark:border-neutral-800 px-4 py-4 hover:border-blue-500/40 hover:bg-blue-50/30 dark:hover:bg-blue-900/5 transition-all"
-                >
-                  <div>
-                    <p className="text-sm font-medium">{link.label}</p>
-                    <p className="text-xs text-gray-500 dark:text-gray-400">
-                      {link.value}
-                    </p>
-                  </div>
+          {/* Right */}
 
-                  <span className="text-sm text-blue-600">→</span>
-                </a>
-              ))}
+          <div className="border-t lg:border-t-0 lg:border-l border-gray-200 dark:border-neutral-800 bg-gray-50/60 dark:bg-neutral-950/50 p-10">
 
-              <a
-                href="/resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center w-full rounded-xl bg-blue-600 text-white py-3.5 font-medium hover:bg-blue-700 transition-colors"
-              >
-                Download Resume
-              </a>
+            <h3 className="text-xl font-semibold mb-8">
+              Get in Touch
+            </h3>
+
+            <div className="space-y-4">
+
+              {LINKS.map((item) => {
+                const Icon = item.icon;
+
+                return (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    {...(item.external
+                      ? {
+                          target: "_blank",
+                          rel: "noopener noreferrer",
+                        }
+                      : {})}
+                    className="group flex items-center justify-between rounded-2xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-5 hover:border-blue-400 transition-all"
+                  >
+                    <div className="flex items-center gap-4">
+
+                      <div className="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center">
+                        <Icon
+                          size={20}
+                          className="text-blue-600 dark:text-blue-400"
+                        />
+                      </div>
+
+                      <div>
+                        <p className="font-medium">
+                          {item.label}
+                        </p>
+
+                        <p className="text-sm text-gray-500 dark:text-gray-400">
+                          {item.value}
+                        </p>
+                      </div>
+
+                    </div>
+
+                    <ArrowUpRight
+                      size={18}
+                      className="text-gray-400 group-hover:text-blue-600 transition-colors"
+                    />
+
+                  </a>
+                );
+              })}
+
             </div>
 
-            <p className="text-xs text-gray-500 dark:text-gray-400 mt-4 text-center">
+            <div className="mt-10 rounded-2xl bg-blue-50 dark:bg-blue-900/10 border border-blue-100 dark:border-blue-900 p-6">
+
+              <div className="flex items-start gap-3">
+
+                <MapPin
+                  size={18}
+                  className="text-blue-600 mt-1"
+                />
+
+                <div>
+
+                  <h4 className="font-semibold mb-2">
+                    Preferred Locations
+                  </h4>
+
+                  <p className="text-sm leading-6 text-gray-600 dark:text-gray-400">
+                    Bengaluru • Noida • Gurugram • Remote
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <p className="text-center text-xs text-gray-500 mt-8">
               Usually responds within 24 hours.
             </p>
+
           </div>
+
         </div>
       </div>
     </section>
